@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FutNarrador - Partida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0b3d0b;
+      color: #fff;
+    }
+
+    .header {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00ff88;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .field {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      background: url('https://i.imgur.com/3ZQ3Z3Q.png') center/cover no-repeat;
+      border: 2px solid #00ff88;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .ball {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    .narration {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .controls button {
+      padding: 0.5rem 1rem;
+      background-color: #00ff88;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .controls button:hover {
+      background-color: #00cc6a;
+    }
+
+    .timeline {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 600px;
+      font-size: 0.9rem;
+    }
+
+    .timeline ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .timeline li {
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">⚽ Flamengo vs Palmeiras — 2º Tempo 35'</div>
+
+  <div class="main">
+    <div class="field">
+      <div class="ball"></div>
+    </div>
+
+    <div class="narration">
+      🔊 Narração: "GOL de Pedro! Flamengo vira o jogo: 2x1!"
+    </div>
+
+    <div class="controls">
+      <button>⏸️ Pausar</button>
+      <button>⏩ Avançar</button>
+      <button>🔁 Reiniciar</button>
+    </div>
+
+    <div class="timeline">
+      <strong>📜 Eventos:</strong>
+      <ul>
+        <li>35' ⚽ Gol de Pedro (Flamengo)</li>
+        <li>30' 🟨 Cartão amarelo para Dudu (Palmeiras)</li>
+        <li>25' 🔄 Substituição: Sai Gerson, entra Allan</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
